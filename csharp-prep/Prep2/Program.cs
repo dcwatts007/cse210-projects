@@ -6,22 +6,24 @@ class Program
     {
         Console.WriteLine("What was your grade percentage? \n(Please write an integer with no additional charaters.)");
         int grade = int.Parse(Console.ReadLine());
+        String letter = "";
         if(grade>=90)
         {
-            Console.WriteLine("Congrats on your A!");
+            letter = "A";
         }else if(grade>=80)
         {
-            Console.WriteLine("Congrats on you B.");
+            letter = "B";
         }else if(grade>=70)
         {
-            Console.WriteLine("You got a C.");
+            letter = "C";
         }else if(grade>=60)
         {
-            Console.WriteLine("Shoot, you got a D.");
+            letter = "D";
         }else
         {
-            Console.WriteLine("Ouch, you got an F.");
+            letter = "F";
         }
+        Console.WriteLine($"You got a {letter}");
         if(grade>=70)
         {
             Console.WriteLine("Congrats! You passed.");
