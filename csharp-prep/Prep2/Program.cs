@@ -23,6 +23,13 @@ class Program
         {
             letter = "F";
         }
+        if(grade%10>=7&&letter!="A"&&letter!="F")
+        {
+            letter+= "+";
+        }else if(grade%10<=3&&letter!="F")
+        {
+            letter+="-";
+        }
         Console.WriteLine($"You got a {letter}");
         if(grade>=70)
         {
