@@ -6,8 +6,8 @@ class Program
     {
         int magic;
         int number;
-        Console.WriteLine("Whit is the magic number?");
-        magic = int.Parse(Console.ReadLine());
+        Random ran = new Random();
+        magic = ran.Next(1,101);
         //loops until the user guesses the magic number. 
         do
         {
