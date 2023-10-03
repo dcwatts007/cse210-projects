@@ -1,38 +1,41 @@
-<mxfile host="app.diagrams.net" modified="2023-10-03T20:48:55.124Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.47" etag="8WCgZDRCmPnsOo6YH5Rp" version="21.8.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-10-03T21:01:11.864Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.0.0 Safari/537.36 Edg/117.0.2045.47" etag="QMVlkIDrAOnnxbN_TDV7" version="21.8.2" type="github">
   <diagram name="Page-1" id="bSgUTcfunNfdBYTZdWoR">
     <mxGraphModel dx="317" dy="728" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="YL5dpS9-5MCll8oL-nbt-1" value="Classname" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="YL5dpS9-5MCll8oL-nbt-1" value="Classname" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="340" y="340" width="160" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="YL5dpS9-5MCll8oL-nbt-2" value="Response: string&lt;br&gt;PromptUsed: string&lt;br&gt;Date: string&lt;br&gt;Prompts: List&amp;lt;string&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="YL5dpS9-5MCll8oL-nbt-1">
+        <mxCell id="YL5dpS9-5MCll8oL-nbt-2" value="Response: string&lt;br&gt;PromptUsed: string&lt;br&gt;Date: string&lt;br&gt;Prompts: List&amp;lt;string&amp;gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="YL5dpS9-5MCll8oL-nbt-1" vertex="1">
           <mxGeometry y="26" width="160" height="64" as="geometry" />
         </mxCell>
-        <mxCell id="YL5dpS9-5MCll8oL-nbt-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="YL5dpS9-5MCll8oL-nbt-1">
+        <mxCell id="YL5dpS9-5MCll8oL-nbt-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="YL5dpS9-5MCll8oL-nbt-1" vertex="1">
           <mxGeometry y="90" width="160" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="YL5dpS9-5MCll8oL-nbt-4" value="Prompt() void&lt;br&gt;AddToJournal(Journal) void&lt;br&gt;AddPrompt(String) void&lt;br&gt;DeletePrompt() void&lt;br&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="YL5dpS9-5MCll8oL-nbt-1">
+        <mxCell id="YL5dpS9-5MCll8oL-nbt-4" value="Prompt() void&lt;br&gt;AddToJournal(Journal) void&lt;br&gt;AddPrompt(String) void&lt;br&gt;DeletePrompt() void&lt;br&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="YL5dpS9-5MCll8oL-nbt-1" vertex="1">
           <mxGeometry y="98" width="160" height="72" as="geometry" />
         </mxCell>
-        <mxCell id="YL5dpS9-5MCll8oL-nbt-5" value="Entry" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="YL5dpS9-5MCll8oL-nbt-5" value="Entry" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="340" y="340" width="160" height="34" as="geometry" />
         </mxCell>
-        <mxCell id="YL5dpS9-5MCll8oL-nbt-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="YL5dpS9-5MCll8oL-nbt-5">
+        <mxCell id="YL5dpS9-5MCll8oL-nbt-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="YL5dpS9-5MCll8oL-nbt-5" vertex="1">
           <mxGeometry y="26" width="160" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="YL5dpS9-5MCll8oL-nbt-9" value="Journal" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="YL5dpS9-5MCll8oL-nbt-9" value="Journal" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="330" y="110" width="210" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="YL5dpS9-5MCll8oL-nbt-10" value="Entries: List&amp;lt;Entry&amp;gt;&lt;br&gt;Owner: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="YL5dpS9-5MCll8oL-nbt-9">
+        <mxCell id="YL5dpS9-5MCll8oL-nbt-10" value="Entries: List&amp;lt;Entry&amp;gt;&lt;br&gt;File: string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="YL5dpS9-5MCll8oL-nbt-9" vertex="1">
           <mxGeometry y="26" width="210" height="44" as="geometry" />
         </mxCell>
-        <mxCell id="YL5dpS9-5MCll8oL-nbt-11" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="YL5dpS9-5MCll8oL-nbt-9">
+        <mxCell id="YL5dpS9-5MCll8oL-nbt-11" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="YL5dpS9-5MCll8oL-nbt-9" vertex="1">
           <mxGeometry y="70" width="210" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="YL5dpS9-5MCll8oL-nbt-12" value="DisplayJournal(): void&lt;br&gt;SaveJournal(string filename): void&lt;br&gt;LoadJournal(string filename): void&lt;br&gt;DisplayMenu(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="YL5dpS9-5MCll8oL-nbt-9">
+        <mxCell id="YL5dpS9-5MCll8oL-nbt-12" value="DisplayJournal(): void&lt;br&gt;SaveJournal(string filename): void&lt;br&gt;LoadJournal(string filename): void&lt;br&gt;DisplayMenu(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="YL5dpS9-5MCll8oL-nbt-9" vertex="1">
           <mxGeometry y="78" width="210" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="TnRx7pSpsadSUnGn5jA8-2" value="Each Journal object is&lt;br&gt;comprised of a list&lt;br&gt;of entries that will&lt;br&gt;make up the journal.&amp;nbsp;&lt;br&gt;Additionally, it will have a&lt;br&gt;variable to store the last&lt;br&gt;used filename so it can be&lt;br&gt;saved to the same file each&lt;br&gt;time if desired.&lt;br&gt;The Method DisplayJounal will&amp;nbsp;&lt;br&gt;print each Entry. Save Journal&lt;br&gt;will save the list of Entries to a file.&lt;br&gt;Load Journal will set the list of Entries&lt;br&gt;to a list stored at the filenames location.&lt;br&gt;Display Menu will give the user options of what&amp;nbsp;&lt;br&gt;they can do.&amp;nbsp;&lt;br&gt;The Entry Class will store the Journal the user&lt;br&gt;inputs and the date and prompt they used.&amp;nbsp;&lt;br&gt;It will also have a list of prompts to draw from that&lt;br&gt;the user can change. The methods AddPrompt and&amp;nbsp;&lt;br&gt;DeletePrompt will change the list of prompts.&lt;br&gt;The Prompt method will display a new prompt for the user.&lt;br&gt;The AddToJournal method will add the response&lt;br&gt;the user has written to a journal.&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="465" y="115" width="330" height="360" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
