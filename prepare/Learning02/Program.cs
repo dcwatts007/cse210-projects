@@ -9,16 +9,18 @@ class Program
         Fred.JobTitle="Software Engeneer";
         Fred.StartYear=1995;
         Fred.EndYear=2019;
+
         Job Joe = new Job();
         Joe.Company="Apple";
         Joe.JobTitle="Goose Herder";
         Joe.StartYear=2019;
         Joe.EndYear=2023;
+
         Resume Steve = new Resume();
-        Steve.jobs = new List<Job>();
+        Steve.Jobs = new List<Job>();
         Steve.Name = "Steve Fredrickson";
-        Steve.jobs.Add(Fred);
-        Steve.jobs.Add(Joe);
+        Steve.Jobs.Add(Fred);
+        Steve.Jobs.Add(Joe);
         Steve.Display();
     }
 }
