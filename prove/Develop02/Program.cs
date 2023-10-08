@@ -4,11 +4,20 @@ class Program
 {
     static void Main(string[] args)
     {
-        List<string> prompts = new List<string>();
+        List<string> prompts = new List<string>(){
+                        "Who was the most interesting person I interacted with today?",
+            "What was the best part of my day?",
+            "How did I see the hand of the Lord in my life today?",
+            "What was the strongest emotion I felt today?",
+            "If I had one thing I could do over today, what would it be?",
+            "Who am I grateful for today.",
+            "What was the coolest thing I did today?"
+        };
         Journal journal = new Journal();
-        int option = journal.DisplayMenu();
+        int option =0;
         while (option != 7)
         {
+            option = journal.DisplayMenu();
             if (option == 1)
             {
                 Console.WriteLine("What should the new journal be called? (follow the file name with .txt)");

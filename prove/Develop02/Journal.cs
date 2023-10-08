@@ -37,20 +37,21 @@ public class Journal
                 saver.WriteLine(entry.Date);
                 saver.WriteLine(entry.PromptUsed);
                 saver.WriteLine(entry.Response);
-
             }
         }
     }
     public void LoadJournal(string file)
     {
         File = file;
-        string[] entries = System.IO.File.ReadAllLines(file);
+        2string[] entries = System.IO.File.ReadAllLines(file);
+        Entries.Clear();
         for (int i = 0; i < entries.Length; i += 3)
         {
             Entry entry = new Entry();
             entry.Date = entries[i];
             entry.PromptUsed = entries[i + 1];
             entry.Response = entries[i + 2];
+            Entries.Add(entry);
         }
     }
     public int DisplayMenu()
