@@ -1,18 +1,16 @@
 using System;
+using System.Reflection.Metadata;
 
 class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Value for x: ");
-        int x = int.Parse(Console.ReadLine());
-        Console.WriteLine("Value for y: ");
-        int y = int.Parse(Console.ReadLine());
-        for(int i=0;i<y;i++)
+        string ans = "";
+        string str = "platypus";
+        for(int i = str.Count();i>0;i--)
         {
-            x=48271*x;
-            x%=Convert.ToInt32((Math.Pow(2,31)-1));
+            ans+=str.Substring(i-1,1);
         }
-        Console.WriteLine($"Result: {x}");
+        Console.WriteLine(ans);
     }
 }

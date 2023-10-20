@@ -43,7 +43,7 @@ public class Journal
     public void LoadJournal(string file)
     {
         File = file;
-        2string[] entries = System.IO.File.ReadAllLines(file);
+        string[] entries = System.IO.File.ReadAllLines(file);
         Entries.Clear();
         for (int i = 0; i < entries.Length; i += 3)
         {
