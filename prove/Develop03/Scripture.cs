@@ -4,22 +4,23 @@ using System.Reflection.Emit;
 
 public class Scripture
 {
-    public Verse Content { get; set; }= new Verse("");
-    public String Reference { get; set; }    public Scripture(string content, string reference)
+    public Verse Content { get; set; } = new Verse("");
+    public String Reference { get; set; }
+    public Scripture(string content, string reference)
     {
-          Verse holder = new Verse(content);
-          Content.Words=holder.Words;
-          Content.Shown=holder.Shown;
-          Reference = reference;
+        Verse holder = new Verse(content);
+        Content.Words = holder.Words;
+        Content.Shown = holder.Shown;
+        Reference = reference;
     }
     public void Memorize()
     {
-        while(Content.Shown.Count!=0)
+        while (Content.Shown.Count != 0)
         {
             int counter = 0;
-            foreach(int i in Content.Shown)
+            foreach (int i in Content.Shown)
             {
-                while(counter!=i)
+                while (counter != i)
                 {
                     Console.Write(" ____ ");
                     counter++;
@@ -28,18 +29,29 @@ public class Scripture
                 counter++;
             }
             Console.WriteLine("\n How many words would you like to erase?(type quit to quit)");
-            String response=Console.ReadLine();
-            if(response.ToLower()=="quit")
+            String response = Console.ReadLine();
+            if (response.ToLower() == "quit")
             {
+                for (int i = 0; i < Content.Words.Count(); i++)
+                {
+                    Content.Shown.Add(i);
+                }
                 break;
             }
-            try{
+            try
+            {
                 Content.Erase(int.Parse(response));
                 Console.Clear();
-            }catch{
+            }
+            catch
+            {
                 Content.Erase();
                 Console.Clear();
             }
+        }
+        for (int i = 0; i < Content.Words.Count(); i++)
+        {
+            Content.Shown.Add(i);
         }
     }
 }

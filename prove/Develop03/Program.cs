@@ -40,7 +40,6 @@ class Program
                         {
                             Console.WriteLine("For " + scripture1.Reference + "type " + counter);
                             counter++;
-
                         }
                         scriptureLibrary.Scriptures[int.Parse(Console.ReadLine())].Memorize();
                     }
