@@ -8,7 +8,7 @@ public class ScriptureLibrary
     }
     public int DisplayMenu()
     {
-        Console.WriteLine("What would you like to do?\n To add a new scripture to your library, press 1.\nTo try to Memorize a scripture, press 2.\nTo Quiz yourself on a specific scripture, press 3\nTo quiz yourself on a random scripture, press 4.\n To Quiz yourelf on all your scriptures, press 5.\nTo quit, press 6.");
+        Console.WriteLine("What would you like to do?\nTo add a new scripture to your library, press 1.\nTo try to Memorize a scripture, press 2.\nTo Quiz yourself on a specific scripture, press 3\nTo quiz yourself on a random scripture, press 4.\nTo Quiz yourelf on all your scriptures, press 5.\nTo quit, press 6.");
         return int.Parse(Console.ReadLine());
     }
     public double Quiz(Scripture scripture)
