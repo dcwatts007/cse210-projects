@@ -29,11 +29,11 @@ class Refelction : Activity
         StartPrompt();
         Random rand = new Random();
         Console.WriteLine(ExpieriencePrompts[rand.Next(0, ExpieriencePrompts.Count())]);
-        Loading();
+        Loading(3);
         while (Timer(time))
         {
             Console.WriteLine(Questions[rand.Next(0, Questions.Count())]);
-            Loading();
+            Loading(3);
         }
         FinalPrompt();
     }

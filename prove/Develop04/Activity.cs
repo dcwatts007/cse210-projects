@@ -31,10 +31,10 @@ class Activity
         Thread.Sleep(3000);
         return DisplayMenu();
     }
-    public void Loading()
+    public void Loading(int time)
     {
         Console.Write("-");
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < time; i++)
         {
             Thread.Sleep(100);
             Console.Write("\b\\");
@@ -44,11 +44,12 @@ class Activity
             Console.Write("\b/");
             Thread.Sleep(100);
             Console.Write("\b-");
+            Thread.Sleep(100);
         }
     }
     public void StartPrompt()
     {
         Console.WriteLine("Get ready...");
-        Loading();
+        Loading(5);
     }
 }
