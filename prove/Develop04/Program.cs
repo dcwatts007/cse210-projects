@@ -1,11 +1,10 @@
 using System;
-using System.Diagnostics;
-
 class Program
 {
     static void Main(string[] args)
     {
-        Activity.StartPrompt();
+        Refelction reflect = new Refelction();
+        reflect.DoIt();
         Console.WriteLine("Hello Develop04 World!");
     }
 }
