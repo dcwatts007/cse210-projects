@@ -1,5 +1,5 @@
 using System;
-class Refelction : Activity
+class Reflection : Activity
 {
     public static List<string> ExpieriencePrompts=new List<string> {"Think of a time you acted selflessly.","Think of a time when you did something really difficult.","Think of a time when you helped someone in need.","Think of a time you felt the spirit."};
     public static List<string> Questions = new List<string>{"Why was this experience meaningful to you?","Have you ever done anything like this before?","How did you feel after your expierience?","What could you learn from your experience?","Whad did you learn about yourself through this expierence?","How will this experience change what you do in the future","What would you do if you could go through this experience again?"};
@@ -13,7 +13,7 @@ class Refelction : Activity
     }
     public void DoIt()
     {
-        Console.WriteLine("Welcome to the reflection activity!\n How long would you like to do this activity.");
+        Console.WriteLine("Welcome to the reflection activity!\nHow long would you like to do this activity.");
         DateTime? time=null;
         while (!(time is DateTime))
         {

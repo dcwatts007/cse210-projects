@@ -30,13 +30,14 @@ class Listing : Activity
             Loading(1);
             Console.Write("\b");
         }
+        Console.WriteLine();
         int counter = 0;
         while (Timer(time))
         {
             Console.ReadLine();
             counter++;
         }
-        Console.WriteLine("You listed "+counter+"items");
+        Console.WriteLine("\nYou listed "+counter+"items");
         FinalPrompt();
     }
 }
