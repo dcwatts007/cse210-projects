@@ -1,1 +1,7 @@
-{"MyGoals":[{"Goal":"Read my scriptures","Complete":false},{"Goal":"eat food","Complete":false},{"Goal":"Finish my homework","Complete":true}]}
+{
+  "MyGoals": [
+    { "Goal": "Eat food", "Complete": false },
+    { "Goal": "go to the store", "Complete": false },
+    { "Goal": "be the very best", "Complete": false }
+  ]
+}

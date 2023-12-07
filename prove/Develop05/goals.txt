@@ -1,0 +1,7 @@
+100
+
+this
+True
+
+yes
+False

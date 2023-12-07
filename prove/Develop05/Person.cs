@@ -3,12 +3,12 @@ using System.Runtime.CompilerServices;
 
 class Person
 {
-    int points;
+    public int Points;
     public List<Goals> MyGoals { get; set; }
     public Person()
     {
         MyGoals = new List<Goals> { };
-        points = 0;
+        Points = 0;
     }
     public void Record()
     {
@@ -17,7 +17,7 @@ class Person
         {
             if(!goal.Complete)
             {
-            Console.WriteLine("For "+goal.Goal+"press "+MyGoals.IndexOf(goal));
+            Console.WriteLine("For "+goal.Goal+" press "+MyGoals.IndexOf(goal));
             }else
             {
                 Console.WriteLine("You have completed "+goal+". Good job!");
@@ -25,8 +25,8 @@ class Person
         }
         try{
              int newPoints=MyGoals[int.Parse(Console.ReadLine())].Record();
-             points+=newPoints;
-            Console.WriteLine("You got "+newPoints+"points!\nYou now have "+points+" points!!!");
+             Points+=newPoints;
+            Console.WriteLine("You got "+newPoints+"points!\nYou now have "+Points+" points!!!");
         }catch{
             Console.WriteLine("Invalid Action");
         }
