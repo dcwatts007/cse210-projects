@@ -11,4 +11,8 @@ class Player
     {
         MyHand=new Hand();
     }
+    public override string ToString()
+    {
+        return Name;
+    }
 }

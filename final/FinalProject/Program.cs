@@ -5,7 +5,6 @@ class Program
     static void Main(string[] args)
     {
         Spades spades = new Spades();
-        spades.Deal();
         spades.Play();
     }
 }

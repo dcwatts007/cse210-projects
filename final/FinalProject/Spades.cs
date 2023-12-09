@@ -3,14 +3,6 @@ using System.Transactions;
 
 class Spades : Game
 {
-    public Spades()
-    {
-        for(int i = 0; i<4;i++)
-        {
-            Player player = new Player();
-            Players.Add(player);
-        }
-    }
     public void Deal()
     {
         Decks.Shuffle();
@@ -55,24 +47,28 @@ class Spades : Game
         Player leader = Players[lead];
         while (Players[0].Score < 500 && Players[1].Score < 500)
         {
-
+            Deal();
+            foreach (Player player in Players)
+            {
+                player.TricksTaken = 0;
+            }
             for (int i = 0; i < 4; i++)
             {
 
                 Console.Clear();
                 if (lead + i < 4)
                 {
-                    int index = lead+i;
-                    if(index>3)
+                    int index = lead + i;
+                    if (index > 3)
                     {
-                        index-=4;
+                        index -= 4;
                     }
-                    Console.WriteLine(Players[index].Name + "Press enter when ready");
+                    Console.WriteLine(Players[index].Name + " Press enter when ready");
                     Console.ReadLine();
                     Console.Write("Your cards are: ");
-                    foreach(Card card in Players[index].MyHand.AllCards)
+                    foreach (Card card in Players[index].MyHand.AllCards)
                     {
-                        Console.Write(card.Value+" of "+card.Suite+" ");
+                        Console.Write(card.Value + " of " + card.Suite + " ");
                     }
                     Console.WriteLine(Players[lead + i].Name + " What would you like to bid?");
                     while (true)
@@ -121,41 +117,48 @@ class Spades : Game
                     if (player.TricksTaken == 0)
                     {
                         player.Score += 100;
-                        if(Players.IndexOf(player)<2)
+                        if (Players.IndexOf(player) < 2)
                         {
-                        Players[Players.IndexOf(player)+2].Score+=100;
-                        }else
+                            Players[Players.IndexOf(player) + 2].Score += 100;
+                        }
+                        else
                         {
-                            Players[Players.IndexOf(player)-2].Score+=100;
+                            Players[Players.IndexOf(player) - 2].Score += 100;
                         }
                     }
                     else
                     {
                         player.Score -= 100;
-                        if(Players.IndexOf(player)<2)
+                        if (Players.IndexOf(player) < 2)
                         {
-                        Players[Players.IndexOf(player)+2].Score-=100;
-                        }else
+                            Players[Players.IndexOf(player) + 2].Score -= 100;
+                        }
+                        else
                         {
-                            Players[Players.IndexOf(player)-2].Score-=100;
+                            Players[Players.IndexOf(player) - 2].Score -= 100;
                         }
                     }
                 }
-                if(Players[0].TricksTaken+Players[2].TricksTaken>=Players[0].Bid+Players[2].Bid)
+
+                if (Players[0].TricksTaken + Players[2].TricksTaken >= Players[0].Bid + Players[2].Bid)
                 {
-                    Players[0].Score+=(Players[0].Bid+Players[2].Bid)*10;
-                }else
-                {
-                    Players[0].Score-=(Players[0].Bid+Players[2].Bid)*10;
+                    Players[0].Score += (Players[0].Bid + Players[2].Bid) * 10;
                 }
-                
-                if(Players[1].TricksTaken+Players[3].TricksTaken>=Players[1].Bid+Players[3].Bid)
+                else
                 {
-                    Players[1].Score+=(Players[1].Bid+Players[3].Bid)*10;
-                }else
-                {
-                    Players[1].Score-=(Players[1].Bid+Players[3].Bid)*10;
+                    Players[0].Score -= (Players[0].Bid + Players[2].Bid) * 10;
                 }
+
+                if (Players[1].TricksTaken + Players[3].TricksTaken >= Players[1].Bid + Players[3].Bid)
+                {
+                    Players[1].Score += (Players[1].Bid + Players[3].Bid) * 10;
+                }
+                else
+                {
+                    Players[1].Score -= (Players[1].Bid + Players[3].Bid) * 10;
+                }
+                Console.WriteLine("The Score is Team 1 with: " + Players[0].Score + " points and Team 2 with " + Players[1].Score + " points. Press enter to start the next round.");
+                Console.ReadLine();
             }
         }
     }

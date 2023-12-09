@@ -24,6 +24,24 @@ class Tricks
             try
             {
                 cards.Add(lead.MyHand.AllCards[int.Parse(Console.ReadLine())]);
+                if (cards[0].Suite == "Spades")
+                {
+                    lead.MyHand.Spades.Remove(cards[0]);
+                }
+                else if (cards[0].Suite == "Hearts")
+                {
+                    lead.MyHand.Hearts.Remove(cards[0]);
+                }
+                else if (cards[0].Suite == "Diamonds")
+                {
+                    lead.MyHand.Hearts.Remove(cards[0]);
+                }
+                else
+                {
+                    lead.MyHand.Clubs.Remove(cards[0]);
+                }
+                lead.MyHand.AllCards.Remove(cards[0]);
+                break;
             }
             catch
             {
@@ -154,9 +172,24 @@ class Tricks
                     try
                     {
                         int choice = int.Parse(Console.ReadLine());
-                        cards.Add(players[index].MyHand.Clubs[choice]);
-                        players[index].MyHand.Clubs.RemoveAt(choice);
-                        players[index].MyHand.AllCards.Remove(cards[cards.Count - 1]);
+                        cards.Add(players[index].MyHand.AllCards[choice]);
+                        if (cards[cards.Count-1].Suite == "Spades")
+                        {
+                            players[index].MyHand.Spades.Remove(cards[cards.Count-1]);
+                        }
+                        else if (cards[cards.Count-1].Suite == "Hearts")
+                        {
+                            players[index].MyHand.Hearts.Remove(cards[cards.Count-1]);
+                        }
+                        else if (cards[cards.Count-1].Suite == "Diamonds")
+                        {
+                            players[index].MyHand.Hearts.Remove(cards[cards.Count-1]);
+                        }
+                        else
+                        {
+                            players[index].MyHand.Clubs.Remove(cards[cards.Count-1]);
+                        }
+                        players[index].MyHand.AllCards.Remove(cards[cards.Count-1]);
                         break;
                     }
                     catch
@@ -171,36 +204,37 @@ class Tricks
             }
         }
         int winner = FindWinner(cards);
-        if(players.IndexOf(lead)+winner>3)
+        if (players.IndexOf(lead) + winner > 3)
         {
-            return players[players.IndexOf(lead)+winner-4];
+            return players[players.IndexOf(lead) + winner - 4];
         }
-        return players[players.IndexOf(lead)+winner];
+        return players[players.IndexOf(lead) + winner];
     }
     public int FindWinner(List<Card> cards)
     {
-        if(IsTrumped)
+        if (IsTrumped)
         {
-        int winner=cards.FindIndex(x=>x.Suite=="Spades");
-        foreach(Card card in cards)
-        {
-            if(card.Suite=="Spades"&&cards[winner].Value<card.Value)
+            int winner = cards.FindIndex(x => x.Suite == "Spades");
+            foreach (Card card in cards)
             {
-                winner=cards.IndexOf(card);
+                if (card.Suite == "Spades" && cards[winner].Value < card.Value)
+                {
+                    winner = cards.IndexOf(card);
+                }
             }
+            return winner;
         }
-        return winner;
-        }else
+        else
         {
-        int winner=0;
-        foreach(Card card in cards)
-        {
-            if(card.Suite==Suite&&cards[winner].Value<card.Value)
+            int winner = 0;
+            foreach (Card card in cards)
             {
-                winner=cards.IndexOf(card);
+                if (card.Suite == Suite && cards[winner].Value < card.Value)
+                {
+                    winner = cards.IndexOf(card);
+                }
             }
-        }
-        return winner;
+            return winner;
         }
     }
 }
